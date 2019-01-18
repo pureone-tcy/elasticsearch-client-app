@@ -1,0 +1,3 @@
+object Hoge {
+  def foo() = ???
+}
