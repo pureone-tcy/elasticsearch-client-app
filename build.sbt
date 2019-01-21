@@ -23,7 +23,8 @@ lazy val sample = (project in file("sample"))
     name := "sample",
     commonSettings,
     dockerBaseImage := "java:8-jdk-alpine",
-    libraryDependencies ++= akkaDependencies
+    libraryDependencies ++= akkaDependencies,
+    mainClass in (Compile, run) := Some("Bootstrap")
   )
   .enablePlugins(JavaAppPackaging, AshScriptPlugin, DockerPlugin)
 //  .settings(dockerCommonSettings: _*)
